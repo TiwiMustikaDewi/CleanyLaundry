@@ -91,13 +91,18 @@ CleanySistemLaundry/
 ```bash
 git clone https://github.com/username/cleany-sistem-laundry.git
 cd cleany-sistem-laundry
+```
 
 ### 2. Run dengan Maven
+```bash
 mvn clean install
 mvn javafx:run
+```
 
 Atau jalankan langsung:
+```bash
 App.java
+```
 
 ## 🎯 Use Case
 Aplikasi ini cocok digunakan untuk:
