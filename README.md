@@ -118,7 +118,7 @@ Elsy Alifia Sirony Putri
 
 ---
 
-##📌 Future Improvements
+## 📌 Future Improvements
 Integrasi database (MySQL / PostgreSQL)
 Export laporan (PDF / Excel)
 Notifikasi status pesanan
@@ -126,5 +126,5 @@ Mobile version (Android / Flutter)
 
 ---
 
-##📄 License
+## 📄 License
 This project is intended for educational and portfolio purposes.
