@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2e4468;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kampus.pertamasistemlaundry.RoleSelectionController">
+
+   <!-- TITLE -->
+   <Label alignment="CENTER" text="Selamat Datang di Cleany Laundry!" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="60">
+      <font><Font name="System Bold Italic" size="40" /></font>
+   </Label>
+
+   <!-- TAGLINE -->
+   <Label alignment="CENTER" text="The Fast Track to Fresh." textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="60" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+      <font><Font name="System Bold Italic" size="31" /></font>
+   </Label>
+
+   <!-- CARD UTAMA -->
+   <VBox alignment="CENTER" prefHeight="312.0" prefWidth="400.0" spacing="20" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="200" AnchorPane.topAnchor="160">
+      <ImageView fitHeight="105.0" fitWidth="105.0">
+         <image>
+            <Image url="@../images/CleanyLaundry.png" />
+         </image>
+      </ImageView>
+
+      <Label text="Pilih Role Anda" textFill="#2e4468">
+         <font><Font name="System Bold" size="20" /></font>
+      </Label>
+
+      <Button onAction="#handlePembeli" prefHeight="40" prefWidth="260" style="-fx-background-color: #2e4468; -fx-text-fill: white; -fx-font-weight: bold;" text="🙋🏻‍♂️ Saya Sebagai Pembeli (Pelanggan)" />
+
+      <Button onAction="#handlePenjual" prefHeight="40" prefWidth="260" style="-fx-background-color: #2e4468; -fx-text-fill: white; -fx-font-weight: bold;" text="👨🏻‍💼 Saya Sebagai Penjual (Petugas)" />
+
+   </VBox>
+
+</AnchorPane>

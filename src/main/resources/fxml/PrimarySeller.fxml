@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kampus.pertamasistemlaundry.PrimarySellerController">
+
+    <!-- ========================= TOP BAR ========================= -->
+    <top>
+        <AnchorPane prefHeight="70.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Label layoutX="104.0" layoutY="25.0" text="Cleany Laundry" textFill="#2a4eb2">
+                    <font><Font name="System Bold" size="26.0" /></font>
+                </Label>
+            <ImageView fitHeight="88.0" fitWidth="93.0">
+               <image>
+                  <Image url="@../images/CleanyLaundry.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </top>
+
+    <!-- ========================= SIDEBAR ========================= -->
+    <left>
+        <VBox alignment="TOP_CENTER" prefWidth="200" spacing="10" style="-fx-background-color: #2E4468;">
+            <padding>
+                <Insets top="20" />
+            </padding>
+
+            <Button onAction="#switchToDashboard" prefHeight="45" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold;" text="Dashboard" />
+
+            <Separator prefWidth="160" />
+
+            <Button onAction="#switchToManageOrders" prefHeight="45" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold;" text="Pesanan Pelanggan" />
+
+            <Separator prefWidth="160" />
+
+            <Button onAction="#switchToManageServices" prefHeight="45" prefWidth="180" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold;" text="Layanan" />
+
+            <Separator prefWidth="160" />
+        </VBox>
+    </left>
+
+    <!-- ========================= MAIN CONTENT ========================= -->
+    <center>
+        <StackPane BorderPane.alignment="CENTER">
+
+            <!-- ========== DASHBOARD PANEL ========== -->
+            <AnchorPane fx:id="panelDashboard" prefWidth="700">
+                <children>
+
+                    <VBox layoutX="20" layoutY="20" spacing="15">
+                        <HBox spacing="20">
+                            <!-- Card 1 -->
+                            <VBox prefHeight="100" prefWidth="220" style="-fx-background-color:#2E4468; -fx-background-radius:10;">
+                                <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
+                                <Label text="Total Pesanan" textFill="white">
+                                    <font><Font size="16" /></font>
+                                </Label>
+                                <Label fx:id="lblTotalPesanan" text="0" textFill="white">
+                                    <font><Font name="System Bold" size="24.0" /></font>
+                                </Label>
+                            </VBox>
+
+                            <!-- Card 2 -->
+                            <VBox prefHeight="100" prefWidth="220" style="-fx-background-color:#2E4468; -fx-background-radius:10;">
+                                <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
+                                <Label text="Diproses" textFill="white">
+                                    <font><Font size="16" /></font>
+                                </Label>
+                                <Label fx:id="lblDiproses" text="0" textFill="white">
+                                    <font><Font name="System Bold" size="24.0" /></font>
+                                </Label>
+                            </VBox>
+
+                            <!-- Card 3 -->
+                            <VBox prefHeight="100" prefWidth="220" style="-fx-background-color: green; -fx-background-radius:10;">
+                                <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
+                                <Label text="Total Pendapatan" textFill="white">
+                                    <font><Font size="16" /></font>
+                                </Label>
+                                <Label fx:id="lblTotalPendapatan" text="Rp0" textFill="white">
+                                    <font><Font name="System Bold" size="24.0" /></font>
+                                </Label>
+                            </VBox>
+                        </HBox>
+
+                        <HBox spacing="20">
+                            <!-- Card 4 -->
+                            <VBox prefHeight="100" prefWidth="220" style="-fx-background-color:#2E4468; -fx-background-radius:10;">
+                                <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
+                                <Label text="Siap Ambil" textFill="white">
+                                    <font><Font size="16" /></font>
+                                </Label>
+                                <Label fx:id="lblSiapAmbil" text="0" textFill="white">
+                                    <font><Font name="System Bold" size="24.0" /></font>
+                                </Label>
+                            </VBox>
+
+                            <!-- Card 5 -->
+                            <VBox prefHeight="100" prefWidth="220" style="-fx-background-color:#2E4468; -fx-background-radius:10;">
+                                <padding><Insets bottom="12" left="12" right="12" top="12" /></padding>
+                                <Label text="Selesai" textFill="white">
+                                    <font><Font size="16" /></font>
+                                </Label>
+                                <Label fx:id="lblSelesai" text="0" textFill="white">
+                                    <font><Font name="System Bold" size="24.0" /></font>
+                                </Label>
+                            </VBox>
+                        </HBox>
+                    </VBox>
+
+                    <Button layoutX="20" layoutY="520" onAction="#handleLogout" prefHeight="30" prefWidth="90" style="-fx-background-color:#D9534F; -fx-text-fill:white; -fx-font-weight:bold;" text="Logout" />
+                </children>
+            </AnchorPane>
+
+<!-- ========== PANEL MANAGE ORDERS (tetap) ========== -->
+            <AnchorPane fx:id="panelManageOrders" prefHeight="200.0" prefWidth="200.0" visible="false">
+                <children>
+                    <Label layoutX="20" layoutY="20" text="Manajemen Pesanan" textFill="#2e4468">
+                        <font><Font name="System Bold" size="24.0" /></font>
+                    </Label>
+                    <TableView fx:id="tvPesananAdmin" layoutX="20" layoutY="60" prefHeight="450" prefWidth="660" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+                        <columns>
+                            <TableColumn fx:id="colNoTransaksi" prefWidth="120.0" text="No. Transaksi" />
+                            <TableColumn fx:id="colNamaPelanggan" prefWidth="120.0" text="Pelanggan" />
+                            <TableColumn fx:id="colTanggal" prefWidth="80.0" text="Tanggal" />
+                            <TableColumn fx:id="colJenisLayanan" prefWidth="100.0" text="Layanan" />
+                            <TableColumn fx:id="colBerat" prefWidth="60.0" text="Berat (Kg)" />
+                            <TableColumn fx:id="colTotalHarga" prefWidth="100.0" text="Total Harga" />
+                            <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+                        </columns>
+                    </TableView>
+                    <Button fx:id="btnHapusPesanan" layoutX="700" layoutY="60" onAction="#handleDeleteOrder" style="-fx-background-color: #d9534f; -fx-text-fill: white; -fx-font-weight: bold;" text="Hapus Pesanan" />
+                </children>
+            </AnchorPane>
+
+            <!-- ========== MANAGE SERVICES PANEL ========== -->
+            <AnchorPane fx:id="panelManageServices" visible="false">
+                <children>
+                    <Label layoutX="20" layoutY="20" style="-fx-font-size:24; -fx-font-weight:bold; -fx-text-fill:#2E4468;" text="Kelola Layanan" />
+
+                    <HBox layoutX="20" layoutY="60" spacing="20">
+                        <!-- TABLE -->
+                        <TableView fx:id="tvLayanan" prefHeight="420" prefWidth="480">
+                            <columns>
+                                <TableColumn fx:id="colNamaLayanan" prefWidth="260" text="Nama Layanan" />
+                                <TableColumn fx:id="colHargaLayanan" prefWidth="180" text="Harga /Kg" />
+                            </columns>
+                        </TableView>
+
+                        <!-- FORM -->
+                        <VBox prefWidth="300" spacing="10" style="-fx-padding:10;">
+                            <Label style="-fx-font-weight:bold; -fx-text-fill:#2E4468; -fx-font-size:16;" text="Form Layanan" />
+
+                            <Label text="Nama Layanan" />
+                            <TextField fx:id="tfNamaLayanan" promptText="Nama layanan" />
+
+                            <Label text="Harga (per Kg)" />
+                            <TextField fx:id="tfHargaLayanan" promptText="Harga (angka)" />
+
+                            <HBox spacing="10">
+                                <Button fx:id="btnTambahLayanan" onAction="#handleTambahLayanan" prefWidth="90" style="-fx-background-color:#2E4468; -fx-text-fill:white;" text="Tambah" />
+
+                                <Button fx:id="btnEditLayanan" onAction="#handleEditLayanan" prefWidth="90" style="-fx-background-color:#F0AD4E; -fx-text-fill:white;" text="Edit" />
+
+                                <Button fx:id="btnHapusLayanan" onAction="#handleHapusLayanan" prefWidth="90" style="-fx-background-color:#D9534F; -fx-text-fill:white;" text="Hapus" />
+                            </HBox>
+
+                            <Label style="-fx-font-size:11; -fx-text-fill:gray;" text="(Pilih baris di tabel untuk mengisi form otomatis)" />
+                        </VBox>
+                    </HBox>
+                </children>
+            </AnchorPane>
+
+        </StackPane>
+    </center>
+</BorderPane>

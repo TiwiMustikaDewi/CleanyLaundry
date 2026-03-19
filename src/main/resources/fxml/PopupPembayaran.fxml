@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.kampus.pertamasistemlaundry.PopupPembayaranController"
+      spacing="12" alignment="CENTER"
+      style="-fx-background-color: #ffffff; -fx-padding: 18; -fx-background-radius: 8;">
+    <children>
+        <Label text="Pembayaran - QRIS" style="-fx-text-fill:#2e4468;">
+            <font><Font size="18" /></font>
+        </Label>
+
+        <!-- Image QRIS -->
+        <ImageView fx:id="imgQR" fitWidth="220" fitHeight="220" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <!-- gunakan path resource (file di src/main/resources/images/qris.png) -->
+                <Image url="@/images/qris.png" />
+            </image>
+        </ImageView>
+
+        <Label fx:id="lblAmount" text="Total: Rp 0" style="-fx-font-weight:bold; -fx-text-fill:#2e4468;">
+            <font><Font size="16" /></font>
+        </Label>
+
+        <Button fx:id="btnClose" text="Tutup" onAction="#handleClose"
+                prefWidth="120" style="-fx-background-color:#2e4468; -fx-text-fill:white; -fx-font-weight:bold;" />
+    </children>
+</VBox>
