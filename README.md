@@ -69,21 +69,6 @@ Project ini menggunakan pendekatan **MVC (Model-View-Controller)**:
 
 ---
 
-## 📂 Project Structure
-CleanySistemLaundry/
-│
-├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ └── resources/
-│ │ ├── fxml/
-│ │ └── images/
-│
-├── App.java
-└── pom.xml
-
----
-
 ## ▶️ How to Run
 
 ### 1. Clone Repository
@@ -113,11 +98,10 @@ Aplikasi ini cocok digunakan untuk:
 ---
 
 ## 👩‍💻 Authors
-Tiwi Mustika Dewi
-Elsy Alifia Sirony Putri
+- Tiwi Mustika Dewi
+- Elsy Alifia Sirony Putri
 
 ---
-
 ## 📌 Future Improvements
 Integrasi database (MySQL / PostgreSQL)
 Export laporan (PDF / Excel)
